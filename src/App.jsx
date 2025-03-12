@@ -15,7 +15,7 @@ import Verify from "./pages/Verify";
 
 function App() {
   return (
-    <div className="overflow-hidden text-gray-700 ">
+    <div className="overflow-hidden text-gray-700 bg-gray-200/30">
       <Header />
 
       <Routes>

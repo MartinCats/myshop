@@ -28,7 +28,7 @@ function Header() {
     <header className="p-5 w-full bg-white">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12 flex-center">
         <Link to="/" className="font-bold text-[24px] flex-1 xl:hidden ">
-          <h1 className="shadow-sm text-blue-500 flex-center size-28 px-2 absolute -top-5 rounded-full ">
+          <h1 className="shadow-sm text-blue-500 flex-center size-28 px-2 absolute -top-5 rounded-full bg-white ">
             Logo
           </h1>
         </Link>
@@ -46,7 +46,7 @@ function Header() {
         </div>
 
         <Link to="/" className="font-bold text-[24px] flex-1 hidden xl:flex ">
-          <h1 className="shadow-sm text-blue-500 flex-center size-28 px-2 absolute -top-5 rounded-full ">
+          <h1 className="shadow-sm text-blue-500 flex-center size-28 px-2 absolute -top-5 rounded-full bg-white">
             Logo
           </h1>
         </Link>
