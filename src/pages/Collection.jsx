@@ -1,7 +1,13 @@
 
 function Collection() {
   return (
-    <div>Collection</div>
+    <section>
+      <div>
+        <div>
+          
+        </div>
+      </div>
+    </section>
   )
 }
 

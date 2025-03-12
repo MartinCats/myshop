@@ -1,14 +1,18 @@
-
+import Hero from "../components/Hero";
+import Footer from "../components/Footer";
+import NewArrivals from "../components/NewArrivals";
+import PopularProduct from "../components/PopularProducts";
+import Features from "../components/Features";
 function Home() {
   return (
-    <section>
-      <div>
-        <div>
-          <h1>Hello</h1>
-        </div>
-      </div>
-    </section>
-  )
+    <>
+      <Hero />
+      <NewArrivals/>
+      <PopularProduct/>
+      <Features/>
+      <Footer />
+    </>
+  );
 }
 
-export default Home
+export default Home;

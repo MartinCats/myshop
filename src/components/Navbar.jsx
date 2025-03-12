@@ -33,27 +33,27 @@ function Navbar({ toggleMenu, menuOpened, styles }) {
         <>
           <FaRegWindowClose
             onClick={toggleMenu}
-            className="text-2xl self-end cursor-pointer relative left-7 text-blue-500"
+            className="text-xl self-end cursor-pointer relative left-7 text-blue-500 hover:text-blue-600 "
           />
 
           <Link to={"/"} className="font-bold text-2xl mb-10">
-            <h1 className="text-blue-500 ">Shoppee</h1>
+            <h1 className="text-blue-500 hover:text-blue-600">Shoppee</h1>
           </Link>
         </>
       )}
       {navItems.map(({ to, label, icon }) => (
-        <div key={label} className="inline-flex">
+        <div key={label} className="inline-flex hover:text-blue-600">
           <NavLink
             to={to}
             className={({ isActive }) =>
               isActive
-                ? "active-link flex-center gap-x-2"
-                : "flex-center gap-x-2"
+                ? "active-link flex-center gap-x-2 "
+                : "flex-center gap-x-2 "
             }
             onClick={menuOpened && toggleMenu}
           >
             {icon}
-            <h1>{label}</h1>
+            <h5 className="text-[16px]">{label}</h5>
           </NavLink>
         </div>
       ))}
