@@ -86,7 +86,7 @@ function Cart() {
                         </h5>
                         <FaRegWindowClose
                           onClick={() => updateQuantity(item._id, item.size, 0)}
-                          className="text-blue-500 cursor-pointer"
+                          className="text-blue-500 cursor-pointer hover:bg-blue-500 hover:text-white"
                         />
                       </div>
                       <p className="font-bold text-[14px] my-0.5">
@@ -94,23 +94,23 @@ function Cart() {
                       </p>
                       <div className="flex-between">
                         <div className="flex items-center ring-1 ring-slate-900/5 rounded-full overflow-hidden bg-gray-900/5">
-                          <button className="p-1.5 bg-white text-blue-500 rounded-full shadow-md">
-                            <FaMinus
-                              onClick={() => decrement(item._id, item.size)}
-                              className="text-xs cursor-pointer"
-                            />
+                          <button
+                            onClick={() => decrement(item._id, item.size)}
+                            className="p-1.5 bg-white text-blue-500 rounded-full shadow-md  hover:bg-blue-500 hover:text-white cursor-pointer"
+                          >
+                            <FaMinus className="text-xs " />
                           </button>
                           <p className="px-2.5">{quantities[key]}</p>
-                          <button className="p-1.5 bg-white text-blue-500 rounded-full shadow-md">
-                            <FaPlus
-                              onClick={() => increment(item._id, item.size)}
-                              className="text-xs cursor-pointer"
-                            />
+                          <button
+                            onClick={() => increment(item._id, item.size)}
+                            className="p-1.5 bg-white text-blue-500 rounded-full shadow-md  hover:bg-blue-500 hover:text-white cursor-pointer"
+                          >
+                            <FaPlus className="text-xs " />
                           </button>
                         </div>
                         <h4 className="h4">
-                          {currency}
                           {productData.price}
+                          {currency}
                         </h4>
                       </div>
                     </div>
@@ -120,13 +120,13 @@ function Cart() {
               );
             })}
           </div>
-          <div>
-            <div>
+          <div className="flex my-10 justify-end">
+            <div className="w-full sm:w-[550px]">
               <CartTotal />
               <div className="flex justify-end">
                 <button
                   className="text-white px-7 py-3 mt-7 rounded-lg transition-all bg-gray-800 font-medium 
-              capitalize cursor-pointer"
+              capitalize cursor-pointer hover:bg-blue-600"
                   onClick={() => navigate("/place-order")}
                 >
                   Checkout

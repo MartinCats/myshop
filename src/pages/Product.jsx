@@ -65,8 +65,8 @@ function Product() {
             {/* rating price */}
             <div className="flex items-baseline gap-x-5 ">
               <h3 className="h3">
-                {currency}
                 {product.price}
+                {currency}
               </h3>
               <div className="flex gap-x-2 text-amber-500 text-xl">
                 <div className="flex flex-center">
@@ -116,7 +116,7 @@ function Product() {
             <div className="flex items-center gap-x-2 mt-2">
               <FaTruckFast className="text-lg" />
               <span className="font-medium text-[14px]">
-                Free Delivery on orders over 500B
+                Free Delivery on orders over 500 THB
               </span>
             </div>
             <hr className="my-4 w-2/3"/>

@@ -17,7 +17,7 @@ const ShopContextProvider = (props) => {
   // เพิ่มของใส่ cart
   const addToCart = async (itemId, size) => {
     if (!size) {
-      toast.error("Please select a size");
+      toast.error("Please select a size",{autoClose: 1500});
       return;
     }
     let cartData = structuredClone(cartItems);
@@ -32,7 +32,7 @@ const ShopContextProvider = (props) => {
       cartData[itemId] = {};
       cartData[itemId][size] = 1;
     }
-
+    toast.success("Adding Complete",{autoClose: 1500});
     setCartItems(cartData);
   };
 
