@@ -1,14 +1,16 @@
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
-import { useState } from "react";
-
+import { useState, useContext } from "react";
+import { ShopContext } from "../context/ShopContext";
 // icons
 import { FaBarsStaggered, FaRegCircleUser } from "react-icons/fa6";
 import { GiBeachBag } from "react-icons/gi";
 import { TbArrowNarrowRight } from "react-icons/tb";
 import { FaSearch } from "react-icons/fa";
 
+
 function Header() {
+  const {setShowSearch, getCartCount} = useContext(ShopContext) 
   const [menuOpened, setMenuOpened] = useState(false);
   const [token, setToken] = useState(true);
   const navigate = useNavigate();
@@ -60,12 +62,12 @@ function Header() {
             />
           )}
           <div>
-            <FaSearch className="cursor-pointer text-xl" />
+            <FaSearch onClick={()=>setShowSearch((prev)=>!prev)} className="cursor-pointer text-xl" />
           </div>
           <Link to={"/cart"} className="flex relative">
             <GiBeachBag className="text-[25px]" />
             <span className="bg-blue-500 text-white font-sm absolute right-0.5 -top-3 flex-center w-5 h-5 rounded-full shadow-inner ">
-              0
+              {getCartCount()}
             </span>
           </Link>
 

@@ -12,12 +12,13 @@ import Product from "./pages/Product";
 import PlaceOrder from "./pages/PlaceOrder";
 import Order from "./pages/Order";
 import Verify from "./pages/Verify";
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
     <div className="overflow-hidden text-gray-700 bg-gray-200/30">
+      <ToastContainer/>
       <Header />
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/collection" element={<Collection />} />
